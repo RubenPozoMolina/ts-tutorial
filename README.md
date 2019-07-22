@@ -83,7 +83,9 @@
     npm install --save-dev @types/node @types/express
     npm install --save-dev ts-node shelljs fs-extra nodemon rimraf npm-run-all
     npm install --save-dev @types/fs-extra @types/shelljs
+    npm install --save-dev eslint eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-standard
     ```
+
 8. Create src/index.ts file with this content:
 
     ```typescript
@@ -111,8 +113,8 @@
         "build": "tsc",
         "prestart": "npm run build",
         "start": "node .",
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
+        "test": "jest --forceExit --coverage --verbose",
+        },
     ```
 
 10. Add a file launch.json into .vscode folder to debug:
@@ -136,5 +138,33 @@
         }
         ]
     }
+    ```
 
+11. Install test frameworks:
+
+    ```bash
+    npm install --save-dev jest ts-jest @types/jest
+    npm install --save-dev supertest @types/supertest
+    ```
+
+12. Configure Jest, add jest.config.js file with this content:
+
+    ```javascript
+    export const globals = {
+        'ts-jest': {
+            tsConfigFile: 'tsconfig.json'
+        }
+    }
+    export const moduleFileExtensions = [
+        'ts',
+        'js'
+    ]
+    export const transform = {
+        '^.+\\.(ts|tsx)$': './node_modules/ts-jest/preprocessor.js'
+    }
+    export const testMatch = [
+        '**/test/**/*.test.(ts|js)'
+    ]
+
+    export const testEnvironment = 'node'
     ```
