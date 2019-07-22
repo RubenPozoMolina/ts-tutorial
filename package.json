@@ -1,0 +1,33 @@
+{
+  "name": "ts-tutorial",
+  "version": "1.0.0",
+  "description": "TypeScript tutorial with Node. How to Debug and test.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RubenPozoMolina/ts-tutorial.git"
+  },
+  "keywords": [
+    "Tutorial",
+    "TypeScript",
+    "Node",
+    "Debug",
+    "Test"
+  ],
+  "author": "Rubén Pozo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RubenPozoMolina/ts-tutorial/issues"
+  },
+  "homepage": "https://github.com/RubenPozoMolina/ts-tutorial#readme",
+  "devDependencies": {
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
