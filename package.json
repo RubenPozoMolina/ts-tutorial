@@ -2,8 +2,11 @@
   "name": "ts-tutorial",
   "version": "1.0.0",
   "description": "TypeScript tutorial with Node. How to Debug and test.",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
+    "build": "tsc",
+    "prestart": "npm run build",
     "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -25,9 +28,11 @@
   },
   "homepage": "https://github.com/RubenPozoMolina/ts-tutorial#readme",
   "devDependencies": {
+    "tslint": "^5.18.0",
     "typescript": "^3.5.3"
   },
   "dependencies": {
+    "@types/express": "^4.17.0",
     "express": "^4.17.1"
   }
 }

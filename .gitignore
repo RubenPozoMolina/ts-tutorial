@@ -58,7 +58,6 @@ internal/
 **/.DS_Store
 .settings
 **/.vs
-**/.vscode
 !**/.vscode/tasks.json
 !tests/cases/projects/projectOption/**/node_modules
 !tests/cases/projects/NodeModulesSearch/**/*
@@ -79,3 +78,4 @@ tests/baselines/reference/dt
 .failed-tests
 TEST-results.xml
 package-lock.json
+dist
