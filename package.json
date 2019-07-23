@@ -29,6 +29,7 @@
   "homepage": "https://github.com/RubenPozoMolina/ts-tutorial#readme",
   "devDependencies": {
     "@types/jest": "^24.0.15",
+    "@types/supertest": "^2.0.8",
     "eslint": "^6.1.0",
     "eslint-config-standard": "^13.0.1",
     "eslint-plugin-import": "^2.18.2",
